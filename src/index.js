@@ -48,6 +48,10 @@ function tokenizeText(text) {
   return tokens
 }
 
+/**
+ * find succesive matches based on this example
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec#Finding_successive_matches
+ */
 function tokenizeTextRegex(text) {
   const tokens = []
   const WORD_BOUNDARY_REGEX = new RegExp('[^' + WORD_BOUNDARY_CHARS + ']+', 'g')
