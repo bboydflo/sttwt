@@ -1,4 +1,4 @@
-# Repository setup for the codility challenges
+# Simple tokenize text to words
 
 ## Install dependencies
 

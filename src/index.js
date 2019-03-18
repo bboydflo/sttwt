@@ -3,7 +3,7 @@ import { log } from './utils'
 // log('hello world!')
 
 var WORD_BOUNDARY_CHARS = '\t\r\n\u00A0 ↵!\"#$%&()*+,\-.\\/:;<=>?@\[\\\]^_`{|}~';
-var WORD_BOUNDARY_REGEX = new RegExp('[' + WORD_BOUNDARY_CHARS + ']');
+var WORD_BOUNDARY_REGEX = new RegExp('[' + WORD_BOUNDARY_CHARS + ']', 'g');
 
 function tokenizeText(text) {
   const tokens = []
@@ -48,11 +48,30 @@ function tokenizeText(text) {
   return tokens
 }
 
+function tokenizeTextRegex(text) {
+  const tokens = []
+  const WORD_BOUNDARY_REGEX = new RegExp('[^' + WORD_BOUNDARY_CHARS + ']+', 'g')
+  let myArray
+  while((myArray = WORD_BOUNDARY_REGEX.exec(text)) !== null) {
+    let value = myArray[0]
+    if (value && value.trim()) {
+      tokens.push({
+        value,
+        index: myArray.index,
+        offset: value.length
+      })
+    }
+  }
+  return tokens
+}
+
 var textToTokenize = `Coming through the youth ranks of AaB, he signed his first professional contract with the club in January 2006, being described as the future goalscorer for the club.[2] 2 years and 2 first team league appearances later, he signed a new contract that was set to expire in the summer of 2011.[3]
 
 Despite being marked as a talent, for the remainder of his AaB time, he never managed to establish himself as a regular in the starting eleven. When his contract expired, he decided to leave AaB and join Randers in the Danish 1st Division, who had just been relegated the previous season, signing a three-year contract.[4] `
 
 // textToTokenize = "To-Do List↵~ Today I need to"
-textToTokenize = "text to be tokenized"
+// textToTokenize = "text to be tokenized"
 
-console.log(JSON.stringify(tokenizeText(textToTokenize)), null, 2)
+// log(JSON.stringify(tokenizeText(textToTokenize)), null, 2)
+// log(JSON.stringify(tokenizeTextRegex(textToTokenize)), null, 2)
+log(tokenizeTextRegex(textToTokenize))
