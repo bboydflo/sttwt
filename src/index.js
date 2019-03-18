@@ -53,5 +53,6 @@ var textToTokenize = `Coming through the youth ranks of AaB, he signed his first
 Despite being marked as a talent, for the remainder of his AaB time, he never managed to establish himself as a regular in the starting eleven. When his contract expired, he decided to leave AaB and join Randers in the Danish 1st Division, who had just been relegated the previous season, signing a three-year contract.[4] `
 
 // textToTokenize = "To-Do List↵~ Today I need to"
+textToTokenize = "text to be tokenized"
 
-console.log(tokenizeText(textToTokenize))
+console.log(JSON.stringify(tokenizeText(textToTokenize)), null, 2)
