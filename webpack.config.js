@@ -18,7 +18,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Codily Tasks'
+      title: 'Simple Text to Word Tokenizer using RegExp'
     })
   ],
   output: {
