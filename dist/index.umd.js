@@ -1,0 +1,2 @@
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):e.simpleText2wordTokens=t()}(this,function(){var e=new RegExp('[^\t\r\n  ↵!"#$%&()*+,-.\\/:;<=>?@[\\]^_`{|}~]+',"g");return function(t,n){var o,r=[];if("string"!=typeof t||!t||!t.replace(/\s*/,""))return r;if(n&&"[object RegExp]"!==Object.prototype.toString.call(n))return r;for(;null!==(o=(n||e).exec(t));){var f=o[0];f&&f.trim()&&r.push({value:f,index:o.index,offset:f.length})}return r}});
+//# sourceMappingURL=index.umd.js.map

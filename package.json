@@ -1,14 +1,24 @@
 {
   "name": "simple-text2word-tokens",
   "version": "0.0.1",
-  "description": "",
+  "description": "simple text to word tokenizer. accepts a custom regex. returns an array of tokens",
   "main": "dist/index.js",
   "source": "src/index.js",
+  "unpkg": "dist/index.umd.js",
+  "module": "dist/index.mjs",
+  "jsnext:main": "dist/index.mjs",
   "scripts": {
     "start": "webpack-dev-server --open",
     "test": "mocha --require @babel/register",
     "bundle": "microbundle",
     "publish": "npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bboydflo/sttwt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bboydflo/sttwt/issues"
   },
   "keywords": ["tokenize", "text"],
   "author": "Florin Cosmin Onciu",

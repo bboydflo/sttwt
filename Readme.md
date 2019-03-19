@@ -1,20 +1,12 @@
 # Simple tokenize text to word tokens
 
-## Install dependencies
+## Install package
 
 ```sh
-npm install
+npm install simple-text2word-tokens
 ```
 
-## Start the project
-
-```sh
-npm start
-```
-
-> The output is only visible on browser console
-
-### Usage
+## Usage
 
 ```js
 import textToWordTokens from 'simple-text2word-tokens'
@@ -45,4 +37,14 @@ console.log(JSON.stringify(textToWordTokens(text), null, 2))
   }
  ]
 */
+```
+
+### Development
+
+```sh
+npm install # install dependencies
+
+npm start # start webpack-dev-server
+
+npm test # run tests
 ```
