@@ -1,4 +1,4 @@
-# Simple tokenize text to words
+# Simple tokenize text to word tokens
 
 ## Install dependencies
 
@@ -17,10 +17,32 @@ npm start
 ### Usage
 
 ```js
-const text = `text to be tokenized`
+import textToWordTokens from 'simple-text2word-tokens'
+const text = 'text to be tokenized'
 
-console.log(JSON.stringify(tokenizeText(text), null, 2))
+console.log(JSON.stringify(textToWordTokens(text), null, 2))
 /**
-[{"value":"text","index":0,"offset":4},{"value":"to","index":5,"offset":2},{"value":"be","index":8,"offset":2},{"value":"tokenized","index":11,"offset":9}]
- * /
+ [
+  {
+    "value": "text",
+    "index": 0,
+    "offset": 4
+  },
+  {
+    "value": "to",
+    "index": 5,
+    "offset": 2
+  },
+  {
+    "value": "be",
+    "index": 8,
+    "offset": 2
+  },
+  {
+    "value": "tokenized",
+    "index": 11,
+    "offset": 9
+  }
+ ]
+*/
 ```
