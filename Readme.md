@@ -47,4 +47,6 @@ npm install # install dependencies
 npm start # start webpack-dev-server
 
 npm test # run tests
+
+npm run bundle # create a new bundle
 ```

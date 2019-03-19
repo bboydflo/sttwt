@@ -10,8 +10,7 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "test": "mocha --require @babel/register",
-    "bundle": "microbundle",
-    "publish": "npm publish"
+    "bundle": "microbundle"
   },
   "repository": {
     "type": "git",
