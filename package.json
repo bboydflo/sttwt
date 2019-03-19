@@ -1,6 +1,6 @@
 {
   "name": "simple-text2word-tokens",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "simple text to word tokenizer. accepts a custom regex. returns an array of tokens",
   "main": "dist/index.js",
   "source": "src/index.js",
